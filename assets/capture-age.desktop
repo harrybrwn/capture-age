@@ -1,0 +1,19 @@
+# Desktop entry template for capture-age.sh.
+# The Exec/TryExec placeholder is substituted by `make install` with the directory the
+# script is installed to, so the entry works regardless of PREFIX (e.g. /usr/local, ~/.local).
+#
+# StartupWMClass is intentionally omitted: under Proton/Wine every app (CaptureAge and the
+# game itself) reports WM_CLASS "steam_proton", so matching on it would group the wrong windows.
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=CaptureAge
+GenericName=Age of Empires II Replay Analyzer
+Comment=Analyze Age of Empires II: Definitive Edition replays
+Exec=@BINDIR@/capture-age
+TryExec=@BINDIR@/capture-age
+Icon=capture-age
+Terminal=false
+Categories=Game;
+Keywords=age of empires;aoe2;replay;captureage;
+StartupNotify=true

@@ -12,6 +12,13 @@ container, without touching Steam's own game prefixes.
 ./capture-age.sh status    # paths + installed version
 ```
 
+Optional: install it as a command with a desktop entry (menu icon):
+
+```bash
+make install                        # ~/.local/bin/capture-age + desktop entry + icon
+sudo make install PREFIX=/usr/local # system-wide
+```
+
 Installs to `~/.local/share/capture-age` (prefix + app). Auto-finds AoE2 DE via
 `libraryfolders.vdf`; override with `CA_HOME`, `CA_STEAM`, `CA_AOE_DIR`, `CA_PROTON`,
 `CA_RUNTIME` (see `--help`).
